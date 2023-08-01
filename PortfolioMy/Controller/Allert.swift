@@ -10,7 +10,9 @@ import UIKit
 extension MainViewController {
 
     func createAc() {
-        let ac = UIAlertController(title: "Добавление навыка", message: "Введите название навыка которым вы владеете", preferredStyle: .alert)
+        let ac = UIAlertController(title: "Добавление навыка",
+                                   message: "Введите название навыка которым вы владеете",
+                                   preferredStyle: .alert)
 
         ac.addTextField() { tf in
             tf.placeholder = "Введите название"

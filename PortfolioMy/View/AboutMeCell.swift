@@ -34,9 +34,21 @@ class AboutMeCell: UITableViewCell {
     }
 
     private func setupConstraints() {
-        let pinLeftDescriptionLabel = NSLayoutConstraint(item: descriptionLabel, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leading, multiplier: 1, constant: 16)
-//        let pinTopDescriptionLabel = NSLayoutConstraint(item: descriptionLabel, attribute: .top, relatedBy: .equal, toItem: contentView, attribute: .top, multiplier: 1, constant: 8)
-        let pinRightDescriptionLabel = NSLayoutConstraint(item: descriptionLabel, attribute: .trailing, relatedBy: .equal, toItem: contentView, attribute: .trailing, multiplier: 1, constant: -16)
+        let pinLeftDescriptionLabel = NSLayoutConstraint(item: descriptionLabel,
+                                                         attribute: .leading,
+                                                         relatedBy: .equal,
+                                                         toItem: contentView,
+                                                         attribute: .leading,
+                                                         multiplier: 1,
+                                                         constant: 16)
+
+        let pinRightDescriptionLabel = NSLayoutConstraint(item: descriptionLabel,
+                                                          attribute: .trailing,
+                                                          relatedBy: .equal,
+                                                          toItem: contentView,
+                                                          attribute: .trailing,
+                                                          multiplier: 1,
+                                                          constant: -16)
 
         contentView.addConstraints([pinLeftDescriptionLabel, pinRightDescriptionLabel])
     }

@@ -29,10 +29,34 @@ class MainViewController: UIViewController {
     }
 
     private func setupConstraints() {
-        let pinLeft = NSLayoutConstraint(item: tableView, attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.leading, multiplier: 1, constant: 0)
-        let pinTop = NSLayoutConstraint(item: tableView, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view.safeAreaLayoutGuide, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: 0)
-        let pinRight = NSLayoutConstraint(item: tableView, attribute: NSLayoutConstraint.Attribute.right, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.right, multiplier: 1, constant: 0)
-        let pinBot = NSLayoutConstraint(item: tableView, attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: 0)
+        let pinLeft = NSLayoutConstraint(item: tableView,
+                                         attribute: NSLayoutConstraint.Attribute.leading,
+                                         relatedBy: NSLayoutConstraint.Relation.equal,
+                                         toItem: view,
+                                         attribute: NSLayoutConstraint.Attribute.leading,
+                                         multiplier: 1,
+                                         constant: 0)
+        let pinTop = NSLayoutConstraint(item: tableView,
+                                        attribute: NSLayoutConstraint.Attribute.top,
+                                        relatedBy: NSLayoutConstraint.Relation.equal,
+                                        toItem: view.safeAreaLayoutGuide,
+                                        attribute: NSLayoutConstraint.Attribute.top,
+                                        multiplier: 1,
+                                        constant: 0)
+        let pinRight = NSLayoutConstraint(item: tableView,
+                                          attribute: NSLayoutConstraint.Attribute.right,
+                                          relatedBy: NSLayoutConstraint.Relation.equal,
+                                          toItem: view,
+                                          attribute: NSLayoutConstraint.Attribute.right,
+                                          multiplier: 1,
+                                          constant: 0)
+        let pinBot = NSLayoutConstraint(item: tableView,
+                                        attribute: NSLayoutConstraint.Attribute.bottom,
+                                        relatedBy: NSLayoutConstraint.Relation.equal,
+                                        toItem: view,
+                                        attribute: NSLayoutConstraint.Attribute.bottom,
+                                        multiplier: 1,
+                                        constant: 0)
 
         view.addConstraints([pinLeft, pinTop, pinRight, pinBot])
     }

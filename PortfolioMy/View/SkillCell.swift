@@ -39,8 +39,20 @@ class SkillsCell: UICollectionViewCell {
 
     private func setupConstraints() {
 
-        let centerXTitleLabel = NSLayoutConstraint(item: titleLabel, attribute: .centerX, relatedBy: .equal, toItem: contentView, attribute: .centerX, multiplier: 1, constant: 0)
-        let centerYTitleLabel = NSLayoutConstraint(item: titleLabel, attribute: .centerY, relatedBy: .equal, toItem: contentView, attribute: .centerY, multiplier: 1, constant: 0)
+        let centerXTitleLabel = NSLayoutConstraint(item: titleLabel,
+                                                   attribute: .centerX,
+                                                   relatedBy: .equal,
+                                                   toItem: contentView,
+                                                   attribute: .centerX,
+                                                   multiplier: 1,
+                                                   constant: 0)
+        let centerYTitleLabel = NSLayoutConstraint(item: titleLabel,
+                                                   attribute: .centerY,
+                                                   relatedBy: .equal,
+                                                   toItem: contentView,
+                                                   attribute: .centerY,
+                                                   multiplier: 1,
+                                                   constant: 0)
 
         contentView.addConstraints([centerXTitleLabel, centerYTitleLabel])
     }
