@@ -13,7 +13,7 @@
 		B95882A42A794763002E3B4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B95882A32A794763002E3B4C /* Assets.xcassets */; };
 		B95882A72A794763002E3B4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B95882A52A794763002E3B4C /* LaunchScreen.storyboard */; };
 		B95882AF2A798E71002E3B4C /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95882AE2A798E71002E3B4C /* ProfileCell.swift */; };
-		B95882B22A798EAE002E3B4C /* HeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95882B12A798EAE002E3B4C /* HeaderSectionView.swift */; };
+		B95882B22A798EAE002E3B4C /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95882B12A798EAE002E3B4C /* SectionView.swift */; };
 		B95882B42A798ED4002E3B4C /* SkillsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95882B32A798ED4002E3B4C /* SkillsCollectionViewCell.swift */; };
 		B95882B62A798EED002E3B4C /* AboutMeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95882B52A798EED002E3B4C /* AboutMeCell.swift */; };
 		B95882B92A798F8D002E3B4C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95882B82A798F8D002E3B4C /* UIColor.swift */; };
@@ -31,7 +31,7 @@
 		B95882A62A794763002E3B4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B95882A82A794763002E3B4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B95882AE2A798E71002E3B4C /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
-		B95882B12A798EAE002E3B4C /* HeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSectionView.swift; sourceTree = "<group>"; };
+		B95882B12A798EAE002E3B4C /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		B95882B32A798ED4002E3B4C /* SkillsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsCollectionViewCell.swift; sourceTree = "<group>"; };
 		B95882B52A798EED002E3B4C /* AboutMeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeCell.swift; sourceTree = "<group>"; };
 		B95882B82A798F8D002E3B4C /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -72,10 +72,9 @@
 			children = (
 				B95882BB2A7996B4002E3B4C /* Controller */,
 				B95882B02A798E86002E3B4C /* View */,
-				B95882BA2A798FE0002E3B4C /* UIColor */,
+				B95882BA2A798FE0002E3B4C /* Other */,
 				B95882B72A798F05002E3B4C /* Support */,
 				B95882A82A794763002E3B4C /* Info.plist */,
-				B95882C22A79A128002E3B4C /* Data.swift */,
 			);
 			path = PortfolioMy;
 			sourceTree = "<group>";
@@ -84,7 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				B95882AE2A798E71002E3B4C /* ProfileCell.swift */,
-				B95882B12A798EAE002E3B4C /* HeaderSectionView.swift */,
+				B95882B12A798EAE002E3B4C /* SectionView.swift */,
 				B95882B32A798ED4002E3B4C /* SkillsCollectionViewCell.swift */,
 				B95882B52A798EED002E3B4C /* AboutMeCell.swift */,
 				B95882BE2A799B77002E3B4C /* SkillCell.swift */,
@@ -103,12 +102,13 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
-		B95882BA2A798FE0002E3B4C /* UIColor */ = {
+		B95882BA2A798FE0002E3B4C /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				B95882C22A79A128002E3B4C /* Data.swift */,
 				B95882B82A798F8D002E3B4C /* UIColor.swift */,
 			);
-			path = UIColor;
+			path = Other;
 			sourceTree = "<group>";
 		};
 		B95882BB2A7996B4002E3B4C /* Controller */ = {
@@ -197,7 +197,7 @@
 				B95882C32A79A128002E3B4C /* Data.swift in Sources */,
 				B95882B62A798EED002E3B4C /* AboutMeCell.swift in Sources */,
 				B958829D2A794762002E3B4C /* SceneDelegate.swift in Sources */,
-				B95882B22A798EAE002E3B4C /* HeaderSectionView.swift in Sources */,
+				B95882B22A798EAE002E3B4C /* SectionView.swift in Sources */,
 				B95882B92A798F8D002E3B4C /* UIColor.swift in Sources */,
 				B95882BF2A799B77002E3B4C /* SkillCell.swift in Sources */,
 				B95882C12A79A0E5002E3B4C /* Allert.swift in Sources */,

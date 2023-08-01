@@ -54,11 +54,13 @@ class HeaderSectionView: UITableViewHeaderFooterView {
         self.titleLabel.text = title
     }
 
-    func setupClickButton() {
+    func setupClickButton(isPressed: Bool) {
         contentView.addSubview(clickButton)
         clickButton.tintColor = .black
         clickButton.translatesAutoresizingMaskIntoConstraints = false
-        clickButton.setImage(UIImage(named: "pencil"), for: .normal)
+        clickButton.setImage(isPressed ? UIImage(named: "ok")
+                              : UIImage(named: "pencil"), for: .normal)
+        clickButton.addTarget(self, action: #selector(clickButtonAction), for: .touchUpInside)
     }
 
     func setupConstraintsClickButton() {
@@ -78,5 +80,9 @@ class HeaderSectionView: UITableViewHeaderFooterView {
                                                     constant: 0)
 
         contentView.addConstraints([pinRightClickButton, centerYClickButton])
+    }
+    
+    @objc private func clickButtonAction() {
+        clickButton.setImage(UIImage(named: "ok"), for: .normal)
     }
 }

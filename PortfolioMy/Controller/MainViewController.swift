@@ -29,10 +29,7 @@ class MainViewController: UIViewController {
     }
 
     private func setupConstraints() {
-        let pinLeft = NSLayoutConstraint(item: tableView,
-                                         attribute: NSLayoutConstraint.Attribute.leading,
-                                         relatedBy: NSLayoutConstraint.Relation.equal,
-                                         toItem: view, attribute: NSLayoutConstraint.Attribute.leading, multiplier: 1, constant: 0)
+        let pinLeft = NSLayoutConstraint(item: tableView, attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.leading, multiplier: 1, constant: 0)
         let pinTop = NSLayoutConstraint(item: tableView, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view.safeAreaLayoutGuide, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: 0)
         let pinRight = NSLayoutConstraint(item: tableView, attribute: NSLayoutConstraint.Attribute.right, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.right, multiplier: 1, constant: 0)
         let pinBot = NSLayoutConstraint(item: tableView, attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: 0)
@@ -56,6 +53,10 @@ class MainViewController: UIViewController {
             forCellReuseIdentifier: ProfileCell.ID)
 
         tableView.register(
+            SkillsCollectionViewCell.self,
+            forCellReuseIdentifier: SkillsCollectionViewCell.ID)
+
+        tableView.register(
             AboutMeCell.self,
             forCellReuseIdentifier: AboutMeCell.ID)
     }
@@ -75,6 +76,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         if indexPath.section == 0 {
+
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: ProfileCell.ID,
                 for: indexPath) as? ProfileCell else { return UITableViewCell() }
@@ -82,7 +84,21 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
             
             return cell
+        } else if indexPath.section == 1 {
+
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: SkillsCollectionViewCell.ID,
+                for: indexPath
+            ) as? SkillsCollectionViewCell else { return UITableViewCell() }
+
+            cell.presentAC = { [weak self] in
+                self?.createAc()
+            }
+
+            return cell
+
         } else if indexPath.section == 2 {
+
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: AboutMeCell.ID,
                 for: indexPath) as? AboutMeCell else { return UITableViewCell() }
@@ -106,7 +122,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             return nil
         } else if section == 1 {
             headerView.configureTitle(title: "Мои навыки")
-            headerView.setupClickButton()
+            headerView.setupClickButton(isPressed: false)
             headerView.setupConstraintsClickButton()
         } else if section == 2 {
             headerView.configureTitle(title: "О себе")

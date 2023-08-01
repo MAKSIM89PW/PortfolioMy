@@ -26,7 +26,9 @@ class SkillsCollectionViewCell: UITableViewCell {
         let vc = UICollectionView(frame: .zero, collectionViewLayout: layout)
         return vc
     }()
-
+    
+    var presentAC: (() -> Void)?
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
